@@ -1,0 +1,157 @@
+package com.indbank.indbankrestfulwebservices.entities;
+
+import java.util.Date;
+
+public class Account {
+
+	 private int id;
+     private String accountNumber;
+     private int balance;
+     private String description;
+     private String note;
+     private boolean select;
+     private Date openingDate;
+     
+     public Account() {}
+     
+     
+
+	public Account(int id, String accountNumber, int balance, String description, String note, boolean select,
+			Date openingDate) {
+		super();
+		this.id = id;
+		this.accountNumber = accountNumber;
+		this.balance = balance;
+		this.description = description;
+		this.note = note;
+		this.select = select;
+		this.openingDate = openingDate;
+	}
+
+
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getAccountNumber() {
+		return accountNumber;
+	}
+
+	public void setAccountNumber(String accountNumber) {
+		this.accountNumber = accountNumber;
+	}
+
+	public int getBalance() {
+		return balance;
+	}
+
+	public void setBalance(int balance) {
+		this.balance = balance;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public String getNote() {
+		return note;
+	}
+
+	public void setNote(String note) {
+		this.note = note;
+	}
+
+	public boolean isSelect() {
+		return select;
+	}
+
+	public void setSelect(boolean select) {
+		this.select = select;
+	}
+
+	public Date getOpeningDate() {
+		return openingDate;
+	}
+
+	public void setOpeningDate(Date openingDate) {
+		this.openingDate = openingDate;
+	}
+
+	@Override
+	public String toString() {
+		return "Account [id=" + id + ", accountNumber=" + accountNumber + ", balance=" + balance + ", description="
+				+ description + ", note=" + note + ", select=" + select + ", openingDate=" + openingDate + ", getId()="
+				+ getId() + ", getAccountNumber()=" + getAccountNumber() + ", getBalance()=" + getBalance()
+				+ ", getDescription()=" + getDescription() + ", getNote()=" + getNote() + ", isSelect()=" + isSelect()
+				+ ", getOpeningDate()=" + getOpeningDate() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode()
+				+ ", toString()=" + super.toString() + "]";
+	}
+
+
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((accountNumber == null) ? 0 : accountNumber.hashCode());
+		result = prime * result + balance;
+		result = prime * result + ((description == null) ? 0 : description.hashCode());
+		result = prime * result + id;
+		result = prime * result + ((note == null) ? 0 : note.hashCode());
+		result = prime * result + ((openingDate == null) ? 0 : openingDate.hashCode());
+		result = prime * result + (select ? 1231 : 1237);
+		return result;
+	}
+
+
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Account other = (Account) obj;
+		if (accountNumber == null) {
+			if (other.accountNumber != null)
+				return false;
+		} else if (!accountNumber.equals(other.accountNumber))
+			return false;
+		if (balance != other.balance)
+			return false;
+		if (description == null) {
+			if (other.description != null)
+				return false;
+		} else if (!description.equals(other.description))
+			return false;
+		if (id != other.id)
+			return false;
+		if (note == null) {
+			if (other.note != null)
+				return false;
+		} else if (!note.equals(other.note))
+			return false;
+		if (openingDate == null) {
+			if (other.openingDate != null)
+				return false;
+		} else if (!openingDate.equals(other.openingDate))
+			return false;
+		if (select != other.select)
+			return false;
+		return true;
+	}
+     
+	
+     
+}

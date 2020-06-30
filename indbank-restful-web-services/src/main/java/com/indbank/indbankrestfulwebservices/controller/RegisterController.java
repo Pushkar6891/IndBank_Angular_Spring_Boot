@@ -1,0 +1,36 @@
+package com.indbank.indbankrestfulwebservices.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.indbank.indbankrestfulwebservices.entities.Register;
+import com.indbank.indbankrestfulwebservices.service.RegisterService;
+
+@RestController
+@RequestMapping("/registration")
+@CrossOrigin(origins = "http://localhost:4200")
+public class RegisterController {
+
+	@Autowired
+	private RegisterService registerService;
+	
+	@PostMapping("/register")
+	public Register register(@RequestBody Register register) {
+		Register registeredAccount = registerService.save(register);
+	//	URI uri = ServletUriComponentsBuilder.fromCurrentContextPath().path("/{id}")
+	//			.buildAndExpand(registeredAccount.getUsername()).toUri();
+		return registeredAccount;
+	}
+	
+	@GetMapping("/register")
+	public List<Register> findAll(){
+		return registerService.findAll();
+	}
+}

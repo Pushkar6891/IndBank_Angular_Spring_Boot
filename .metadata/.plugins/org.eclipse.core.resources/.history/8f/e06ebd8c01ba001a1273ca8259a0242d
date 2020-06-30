@@ -1,0 +1,19 @@
+http://localhost:8061/hello
+http://localhost:8061/welcome
+http://localhost:8061/welcomePathVariable/pushkar
+http://localhost:8061/account
+http://localhost:8061/account/path-variable/savingsaccount
+
+
+http://localhost:8061/accounts/account/1
+http://localhost:8061/registration/register
+
+POST: http://localhost:8061/authenticate
+{
+	"username":"pushkar",
+	"password":"dummy"
+}
+
+https://jwt.io/
+
+Authorization Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwdXNoa2FyIiwiZXhwIjoxNTk0MDM3MjQwLCJpYXQiOjE1OTM0MzI0NDB9.ptt6kF-u5olctHuQUREQIkeMvpmGuRddtTKNu6RJp5n_YMXh35mrzPpcTVopqmmPN0WyVL8bLK4rqonzL8icSw

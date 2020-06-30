@@ -1,0 +1,3 @@
+server.port=8061
+spring.security.user.name=pushkar
+spring.security.user.password==dummy

@@ -1,0 +1,29 @@
+package com.indbank.indbankrestfulwebservices.controller;
+
+import java.net.URI;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
+
+import com.indbank.indbankrestfulwebservices.entities.Account;
+import com.indbank.indbankrestfulwebservices.entities.Register;
+import com.indbank.indbankrestfulwebservices.service.RegisterService;
+
+@RestController("/")
+public class RegisterController {
+
+	@Autowired
+	private RegisterService registerService;
+	
+	@PostMapping("/register")
+	public Register register(@RequestBody Register register) {
+		Account createdAccount = hardcodedService.save(account);
+		URI uri = ServletUriComponentsBuilder.fromCurrentContextPath().path("/{id}")
+				.buildAndExpand(createdAccount.getId()).toUri();
+		return createdAccount;
+	}
+}

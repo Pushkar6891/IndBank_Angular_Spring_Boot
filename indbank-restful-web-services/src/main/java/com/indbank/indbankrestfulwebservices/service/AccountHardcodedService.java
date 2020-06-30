@@ -1,0 +1,58 @@
+package com.indbank.indbankrestfulwebservices.service;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.indbank.indbankrestfulwebservices.entities.Account;
+
+@Service
+public class AccountHardcodedService {
+
+	private static List<Account> accounts = new ArrayList<>();
+	private static int idCounter = 0;
+	
+	static {
+		accounts.add(new Account(++idCounter, "101", 100, "Account 1", "Note 1", false, new Date(), "+919826396465", "pushkarchauhan91@gmail.com"));
+		accounts.add(new Account(++idCounter, "201", 200, "Account 2", "Note 2", false, new Date(), "+919826396465", "pushkarchauhan91@gmail.com"));
+		accounts.add(new Account(++idCounter, "301", 300, "Account 3", "Note 3", false, new Date(), "+919826396465", "pushkarchauhan91@gmail.com"));
+		accounts.add(new Account(++idCounter, "401", 400, "Account 4", "Note 4", false, new Date(), "+919826396465", "pushkarchauhan91@gmail.com"));
+		accounts.add(new Account(++idCounter, "501", 500, "Account 5", "Note 5", false, new Date(), "+919826396465", "pushkarchauhan91@gmail.com"));
+	}
+
+	public List<Account> findAll() {
+		return accounts;
+	}
+
+	public Account deleteById(long id) {
+		Account account = findById(id);
+		if (account == null)
+			return null;
+		if (accounts.remove(account)) {
+			return account;
+		}
+		return null;
+	}
+
+	public Account findById(long id) {
+		for (Account account : accounts) {
+			if (account.getId() == id) {
+				return account;
+			}
+		}
+		return null;
+	}
+	
+	public Account save(Account account) {
+		if(account.getId()==-1) {
+			account.setId(++idCounter);
+			accounts.add(account);
+		}else {
+			deleteById(account.getId());
+			accounts.add(account);
+		}
+		return account;
+	}
+}

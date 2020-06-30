@@ -1,0 +1,13 @@
+package com.indbank.indbankrestfulwebservices.service;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.indbank.indbankrestfulwebservices.entities.Account;
+
+public class AccountHardcodedService {
+
+	private static List<Account> accounts = new ArrayList<>();
+	
+	
+}

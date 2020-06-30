@@ -1,0 +1,55 @@
+package com.indbank.indbankrestfulwebservices.controller;
+
+import java.util.Date;
+
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.indbank.indbankrestfulwebservices.entities.Account;
+import com.indbank.indbankrestfulwebservices.entities.WelcomeBean;
+
+@RestController("/")
+@CrossOrigin(origins = "http://localhost:4200")
+public class AccountController {
+
+	@GetMapping("/hello")
+	public String hello() {
+		return "Hello!";
+	}
+	
+	@GetMapping("/welcome")
+	public WelcomeBean welcome() {
+		return new WelcomeBean("Hello World!!");
+	}
+	
+	@GetMapping("/welcomePathVariable/{name}")
+	public WelcomeBean welcome() {
+		return new WelcomeBean("Hello World!!");
+	}
+
+	@GetMapping("/account")
+	public Account accountDetails() {
+		int id = 101;
+		String accountNumber = "123";
+		int balance = 123;
+		String description = "Dummy Description";
+		String note = "Dummy Note";
+		boolean select = false;
+		Date openingDate = new Date();
+		return new Account(id, accountNumber, balance, description, note, select, openingDate);
+	}
+
+	@GetMapping("/account/path-variable/{name}")
+	public Account accountDetailsPathVariable(@PathVariable String name) {
+		int id = 101;
+		String accountNumber = "123";
+		int balance = 123;
+		String description = String.format("Hello %s", name);
+		String note = "Dummy Note";
+		boolean select = false;
+		Date openingDate = new Date();
+		return new Account(id, accountNumber, balance, description, note, select, openingDate);
+	}
+}

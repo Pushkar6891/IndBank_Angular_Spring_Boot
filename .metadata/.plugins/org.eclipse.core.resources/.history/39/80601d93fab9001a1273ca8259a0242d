@@ -1,0 +1,21 @@
+package com.indbank.indbankrestfulwebservices.entities;
+
+public class WelcomeBean2 {
+	private String message;
+	
+	public WelcomeBean2() {}
+	
+	public WelcomeBean2(String message) {
+		this.message = message;
+	}
+
+	public String getMessage() {
+		return message;
+	}
+
+	public void setMessage(String message) {
+		this.message = message;
+	}
+	
+	
+}

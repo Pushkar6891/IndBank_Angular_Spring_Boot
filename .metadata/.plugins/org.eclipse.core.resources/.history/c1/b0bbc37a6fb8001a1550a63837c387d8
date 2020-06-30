@@ -1,0 +1,5 @@
+package com.indbank.indbankrestfulwebservices.service;
+
+public class RegisterService {
+
+}

@@ -1,0 +1,84 @@
+package com.indbank.indbankrestfulwebservices.entities;
+
+import java.util.Date;
+
+public class Account {
+
+	 private int id;
+     private String accountNumber;
+     private int balance;
+     private String description;
+     private String note;
+     private boolean select;
+     private Date openingDate;
+     
+     public Account() {}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getAccountNumber() {
+		return accountNumber;
+	}
+
+	public void setAccountNumber(String accountNumber) {
+		this.accountNumber = accountNumber;
+	}
+
+	public int getBalance() {
+		return balance;
+	}
+
+	public void setBalance(int balance) {
+		this.balance = balance;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public String getNote() {
+		return note;
+	}
+
+	public void setNote(String note) {
+		this.note = note;
+	}
+
+	public boolean isSelect() {
+		return select;
+	}
+
+	public void setSelect(boolean select) {
+		this.select = select;
+	}
+
+	public Date getOpeningDate() {
+		return openingDate;
+	}
+
+	public void setOpeningDate(Date openingDate) {
+		this.openingDate = openingDate;
+	}
+
+	@Override
+	public String toString() {
+		return "Account [id=" + id + ", accountNumber=" + accountNumber + ", balance=" + balance + ", description="
+				+ description + ", note=" + note + ", select=" + select + ", openingDate=" + openingDate + ", getId()="
+				+ getId() + ", getAccountNumber()=" + getAccountNumber() + ", getBalance()=" + getBalance()
+				+ ", getDescription()=" + getDescription() + ", getNote()=" + getNote() + ", isSelect()=" + isSelect()
+				+ ", getOpeningDate()=" + getOpeningDate() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode()
+				+ ", toString()=" + super.toString() + "]";
+	}
+     
+     Ï
+}

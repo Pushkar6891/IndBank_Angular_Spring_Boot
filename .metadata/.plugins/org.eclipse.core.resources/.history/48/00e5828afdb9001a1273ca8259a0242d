@@ -1,0 +1,22 @@
+package com.indbank.indbankrestfulwebservices.entities;
+
+import java.util.Date;
+
+public class Account {
+
+	private int id;
+	private String accountNumber;
+	private int balance;
+	private String description;
+	private String note;
+	private boolean selects;
+	private Date openingDate;
+	private String mobile;
+	private String email;
+
+	public Account() {
+	}
+
+	
+
+}

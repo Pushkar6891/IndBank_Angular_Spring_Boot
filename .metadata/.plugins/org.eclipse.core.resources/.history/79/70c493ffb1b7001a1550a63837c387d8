@@ -1,0 +1,11 @@
+package com.indbank.indbankrestfulwebservices.service;
+
+import com.indbank.indbankrestfulwebservices.entities.Customer;
+
+public class CustomerService {
+
+	private static 
+	public Customer save(Customer customer) {
+		
+	}
+}

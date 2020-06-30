@@ -1,0 +1,13 @@
+package com.indbank.indbankrestfulwebservices.service;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.indbank.indbankrestfulwebservices.entities.Register;
+
+public class RegisterService {
+
+	private static List<Register> registers = new ArrayList<>();
+	
+	
+}

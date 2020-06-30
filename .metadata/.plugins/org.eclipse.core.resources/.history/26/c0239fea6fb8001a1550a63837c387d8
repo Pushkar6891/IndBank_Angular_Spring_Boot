@@ -1,0 +1,15 @@
+package com.indbank.indbankrestfulwebservices.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.indbank.indbankrestfulwebservices.service.RegisterService;
+
+@RestController("/")
+public class RegisterController {
+
+	@Autowired
+	private RegisterService registerService;
+	
+	
+}

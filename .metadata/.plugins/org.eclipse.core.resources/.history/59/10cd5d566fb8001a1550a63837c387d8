@@ -1,0 +1,10 @@
+package com.indbank.indbankrestfulwebservices.entities;
+
+public class Register {
+
+	public String username;
+	public String password;
+	public String confirmPassword;
+	public String mobile;
+	public String email;
+}

@@ -1,0 +1,9 @@
+http://localhost:8061/hello
+http://localhost:8061/welcome
+http://localhost:8061/welcomePathVariable/pushkar
+http://localhost:8061/account
+http://localhost:8061/account/path-variable/savingsaccount
+
+
+http://localhost:8061/accounts/account/1
+http://localhost:8061/registration/register

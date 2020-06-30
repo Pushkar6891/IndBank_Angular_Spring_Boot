@@ -1,0 +1,5 @@
+package com.indbank.indbankrestfulwebservices.auth.basic;
+
+public class SpringSecurityConfigurationBasicAuth {
+
+}
